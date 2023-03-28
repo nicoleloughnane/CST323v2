@@ -3,8 +3,11 @@ package com.gcu.business;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.gcu.CST323SpringV2;
 import com.gcu.model.OrderModel;
 
+import lombok.extern.slf4j.Slf4j;
+@Slf4j
 public class OrdersBusinessService implements OrdersBusinessInterface{
 
 	
@@ -16,6 +19,7 @@ public class OrdersBusinessService implements OrdersBusinessInterface{
 	
 	public List<OrderModel> getOrders() {
 		//create orders
+		log.info("in getOrders in OrdersBusinessService");
 		List<OrderModel> orders = new ArrayList<OrderModel>();
 		orders.add(new OrderModel(0L, "0000000001", "Product 1", 1.00f, 1));
 		orders.add(new OrderModel(1L, "0000000002", "Product 2", 2.00f, 2));
